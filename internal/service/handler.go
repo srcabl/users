@@ -8,7 +8,7 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
-// Handler implments the sources service
+// Handler implments the users service
 type Handler struct {
 	pb.UnimplementedUserServiceServer
 }
@@ -24,6 +24,7 @@ func (h *Handler) HealthCheck(ctx context.Context, empty *emptypb.Empty) (*empty
 	return nil, nil
 }
 
+// Login handles the login of users
 func (h *Handler) Login(ctx context.Context, req *pb.LoginRequest) (*pb.LoginResponse, error) {
 
 	return nil, errors.New("not implemented")
